@@ -104,7 +104,11 @@ class student :
 
 
 
+        #--------------Table Frame-------------------
 
+
+
+        
 
 root=Tk()
 ob=student(root)
