@@ -1,6 +1,6 @@
-from cProfile import label
+from math import comb
 from tkinter import *
-
+from tkinter import ttk
 from matplotlib.pyplot import text
 from mysqlx import Column
 
@@ -26,24 +26,59 @@ class student :
         m_title=Label(Manage_Frame,text="Manager Students",bg="light green",fg="black",font=("Times new roman",25,"bold"))
         m_title.grid(row=0,columnspan=2,pady=20)
 
-
-        lbl_roll=Label(Manage_Frame,text="Roll No.",bg="light green",fg="black",font=("Sans-serif",20,"bold"))
+         # roll number part
+        lbl_roll=Label(Manage_Frame,text="Roll No.",bg="light green",fg="black",font=("Sans-serif",20,"bold")) 
         lbl_roll.grid(row=1,column=0,pady=10,padx=20,sticky='w')
 
         txt_roll=Entry(Manage_Frame,font=("Times new roman",15,"bold"),bd=5,relief=GROOVE)
         txt_roll.grid(row=1,column=1,pady=10,padx=20,sticky='w')
 
+        #name part
         lbl_name=Label(Manage_Frame,text="Name",bg="light green",fg="black",font=("Sans-serif",20,"bold"))
         lbl_name.grid(row=2,column=0,pady=10,padx=20,sticky='w')
 
-        lbl_name=Entry(Manage_Frame,font=("Times new roman",15,"bold"),bd=5,relief=GROOVE)
-        lbl_name.grid(row=2,column=1,pady=10,padx=20,sticky='w')
+        txt_name=Entry(Manage_Frame,font=("Times new roman",15,"bold"),bd=5,relief=GROOVE)
+        txt_name.grid(row=2,column=1,pady=10,padx=20,sticky='w')
 
+
+        # Email part
         lbl_Email=Label(Manage_Frame,text="Email",bg="light green",fg="black",font=("Sans-serif",20,"bold"))
         lbl_Email.grid(row=3,column=0,pady=10,padx=20,sticky='w')
 
-        lbl_Email=Entry(Manage_Frame,font=("Times new roman",15,"bold"),bd=5,relief=GROOVE)
-        lbl_Email.grid(row=3,column=1,pady=10,padx=20,sticky='w')
+        txt_Email=Entry(Manage_Frame,font=("Times new roman",15,"bold"),bd=5,relief=GROOVE)
+        txt_Email.grid(row=3,column=1,pady=10,padx=20,sticky='w')
+
+
+        #Gender part
+        lbl_Gender=Label(Manage_Frame,text="Gender",bg="light green",fg="black",font=("Sans-serif",20,"bold"))
+        lbl_Gender.grid(row=4,column=0,pady=10,padx=20,sticky='w')
+
+        combo_gender=ttk.Combobox(Manage_Frame,font=("Times new roman",14,"bold"))
+        combo_gender['values']=("Female","Male","Other")
+        combo_gender.grid(row=4,column=1,padx=10,pady=20,sticky='w')
+
+
+        #Contact part
+        lbl_Contact=Label(Manage_Frame,text="Contact",bg="light green",fg="black",font=("Sans-serif",20,"bold"))
+        lbl_Contact.grid(row=5,column=0,pady=10,padx=20,sticky='w')
+
+        txt_Contact=Entry(Manage_Frame,font=("Times new roman",15,"bold"),bd=5,relief=GROOVE)
+        txt_Contact.grid(row=5,column=1,pady=10,padx=20,sticky='w')
+
+          #Date of Birth part
+        lbl_DOB=Label(Manage_Frame,text="D.O.B",bg="light green",fg="black",font=("Sans-serif",20,"bold"))
+        lbl_DOB.grid(row=6,column=0,pady=10,padx=20,sticky='w')
+
+        txt_DOB=Entry(Manage_Frame,font=("Times new roman",15,"bold"),bd=5,relief=GROOVE)
+        txt_DOB.grid(row=6,column=1,pady=10,padx=20,sticky='w')
+
+          #Address part
+        lbl_Address=Label(Manage_Frame,text="Address",bg="light green",fg="black",font=("Sans-serif",20,"bold"))
+        lbl_Address.grid(row=7,column=0,pady=10,padx=20,sticky='w')
+
+        txt_Address=Entry(Manage_Frame,font=("Times new roman",15,"bold"),bd=5,relief=GROOVE)
+        txt_Address.grid(row=7,column=1,pady=10,padx=20,sticky='w')
+        
         
 
 
