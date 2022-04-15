@@ -1,8 +1,6 @@
-from math import comb
+
 from tkinter import *
 from tkinter import ttk
-from matplotlib.pyplot import text
-from mysqlx import Column
 
 class student :
     def __init__(self,root):
@@ -15,12 +13,10 @@ class student :
 
 
         Manage_Frame=Frame(self.root,bd=4,relief=RIDGE,bg="light green")  # to customize the left frame
-        Manage_Frame.place(x=15,y=100,width=450,height=560)
+        Manage_Frame.place(x=20,y=100,width=450,height=660)
 
 
 
-        Detail_Frame=Frame(self.root,bd=4,relief=RIDGE,bg="light green")   # to customize the right frame
-        Detail_Frame.place(x=500,y=100,width=825,height=560)
 
         #left frame inner details
         m_title=Label(Manage_Frame,text="Manager Students",bg="light green",fg="black",font=("Times new roman",25,"bold"))
@@ -76,12 +72,23 @@ class student :
         lbl_Address=Label(Manage_Frame,text="Address",bg="light green",fg="black",font=("Sans-serif",20,"bold"))
         lbl_Address.grid(row=7,column=0,pady=10,padx=20,sticky='w')
 
-        txt_Address=Entry(Manage_Frame,font=("Times new roman",15,"bold"),bd=5,relief=GROOVE)
+        txt_Address=Text(Manage_Frame,width=20,height=4,font=("Times new roman",15,"bold"),bd=5,relief=GROOVE)
         txt_Address.grid(row=7,column=1,pady=10,padx=20,sticky='w')
         
-        
+        #----------Buttons Frame -----------------
+
+        btn_frame=Frame(Manage_Frame,bd=4,relief=RIDGE,bg="Light green")
+        btn_frame.place(x=10,y=580,width=416)
+
+        addbtn=Button(btn_frame,text="ADD",width=8).grid(row=8,column=0,padx=10,pady=10)
+        updatebtn=Button(btn_frame,text="UPDATE",width=8).grid(row=8,column=1,padx=10,pady=10)
+        deletebtn=Button(btn_frame,text="DELETE",width=8).grid(row=8,column=2,padx=10,pady=10)
+        clearbtn=Button(btn_frame,text="CLEAR",width=8).grid(row=8,column=3,padx=10,pady=10)
 
 
+
+        Detail_Frame=Frame(self.root,bd=4,relief=RIDGE,bg="light green")   # to customize the right frame
+        Detail_Frame.place(x=500,y=100,width=800,height=560)
 
 
 
