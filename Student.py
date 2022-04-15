@@ -12,15 +12,14 @@ class student :
         title.pack(side=TOP,fill=X)
 
 
-        Manage_Frame=Frame(self.root,bd=4,relief=RIDGE,bg="light green")  # to customize the left frame
+
+       #---------------RIGHT Frame----------------------
+        Manage_Frame=Frame(self.root,bd=4,relief=RIDGE,bg="light green")    # to customize the COLOR OR FONT OF right frame
         Manage_Frame.place(x=20,y=100,width=450,height=660)
 
-
-
-
-        #left frame inner details
         m_title=Label(Manage_Frame,text="Manager Students",bg="light green",fg="black",font=("Times new roman",25,"bold"))
         m_title.grid(row=0,columnspan=2,pady=20)
+
 
          # roll number part
         lbl_roll=Label(Manage_Frame,text="Roll No.",bg="light green",fg="black",font=("Sans-serif",20,"bold")) 
@@ -61,14 +60,14 @@ class student :
         txt_Contact=Entry(Manage_Frame,font=("Times new roman",15,"bold"),bd=5,relief=GROOVE)
         txt_Contact.grid(row=5,column=1,pady=10,padx=20,sticky='w')
 
-          #Date of Birth part
+        #Date of Birth part
         lbl_DOB=Label(Manage_Frame,text="D.O.B",bg="light green",fg="black",font=("Sans-serif",20,"bold"))
         lbl_DOB.grid(row=6,column=0,pady=10,padx=20,sticky='w')
 
         txt_DOB=Entry(Manage_Frame,font=("Times new roman",15,"bold"),bd=5,relief=GROOVE)
         txt_DOB.grid(row=6,column=1,pady=10,padx=20,sticky='w')
 
-          #Address part
+        #Address part
         lbl_Address=Label(Manage_Frame,text="Address",bg="light green",fg="black",font=("Sans-serif",20,"bold"))
         lbl_Address.grid(row=7,column=0,pady=10,padx=20,sticky='w')
 
@@ -86,9 +85,12 @@ class student :
         clearbtn=Button(btn_frame,text="CLEAR",width=8).grid(row=8,column=3,padx=10,pady=10)
 
 
+       #---------------LEFT Frame----------------------
+        Detail_Frame=Frame(self.root,bd=4,relief=RIDGE,bg="light green")    # to customize the COLOR OR FONT OF right frame
+        Detail_Frame.place(x=500,y=100,width=800,height=560)    
+ 
 
-        Detail_Frame=Frame(self.root,bd=4,relief=RIDGE,bg="light green")   # to customize the right frame
-        Detail_Frame.place(x=500,y=100,width=800,height=560)
+
 
 
 
