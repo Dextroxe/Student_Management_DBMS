@@ -87,9 +87,20 @@ class student :
 
        #---------------LEFT Frame----------------------
         Detail_Frame=Frame(self.root,bd=4,relief=RIDGE,bg="light green")    # to customize the COLOR OR FONT OF right frame
-        Detail_Frame.place(x=500,y=100,width=800,height=560)    
- 
+        Detail_Frame.place(x=500,y=100,width=930,height=660)    
 
+        lbl_search=Label(Detail_Frame,text="Search by",bg="light green",fg="black",font=("Times new roman",20,"bold"))
+        lbl_search.grid(row=0,column=1,pady=10,padx=10,sticky='w')
+
+        combo_search=ttk.Combobox(Detail_Frame,width=15,font=("Times new roman",14,"bold"))
+        combo_search['values']=("Roll no.","Name","Contact")
+        combo_search.grid(row=0,column=2,padx=20,pady=10)
+
+        txt_search=Entry(Detail_Frame,font=("Times new roman",14,"bold"),bd=6,relief=GROOVE)
+        txt_search.grid(row=0,column=3,pady=10,padx=20,sticky='w')
+        
+        searchbtn=Button(Detail_Frame,text="SEARCH",width=12).grid(row=0,column=4,padx=10,pady=10)
+        shawallbtn=Button(Detail_Frame,text="SHOW ALL",width=12).grid(row=0,column=5,padx=10,pady=10)
 
 
 
