@@ -137,7 +137,7 @@ class student :
         Student_table.pack(fill=BOTH,expand=1)
 
 
-        
+        #more content 
 
 root=Tk()
 ob=student(root)
